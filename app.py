@@ -143,19 +143,21 @@ def ask(question):
   print(output['llm']['replies'][0])
   return output['llm']['replies'][0]
 
+"""
+ for testing purpose only
+"""
+# iface = gr.Interface(fn=ask, inputs=gr.Textbox(
+#     value="How are mRNA vaccines being used for cancer treatment?"), 
+#         outputs="markdown",  
+#         title="LLM Augmented Q&A over PubMed Search Engine",
+#         description="Ask a question about BioMedical and get an answer from a friendly AI assistant.",
+#         examples=[["How are mRNA vaccines being used for cancer treatment?"], 
+#                 ["Give me a case study on Cancer diseas."]
+#                 ["Suggest me some Case Studies related to Pneumonia."],
+#                 ["Tell me about HIV AIDS."],["Suggest some case studies related to Auto Immune Disorders."],
+#                 ["How to treat a COVID infected Patient?"]],
+#     theme=gr.themes.Soft(),
+#     allow_flagging="never",)
 
-iface = gr.Interface(fn=ask, inputs=gr.Textbox(
-    value="How are mRNA vaccines being used for cancer treatment?"), 
-        outputs="markdown",  
-        title="LLM Augmented Q&A over PubMed Search Engine",
-        description="Ask a question about BioMedical and get an answer from a friendly AI assistant.",
-        examples=[["How are mRNA vaccines being used for cancer treatment?"], 
-                ["Give me a case study on Cancer diseas."]
-                ["Suggest me some Case Studies related to Pneumonia."],
-                ["Tell me about HIV AIDS."],["Suggest some case studies related to Auto Immune Disorders."],
-                ["How to treat a COVID infected Patient?"]],
-    theme=gr.themes.Soft(),
-    allow_flagging="never",)
 
-
-iface.launch(debug=True)
+# iface.launch(debug=True)
